@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Titre de la page -->
+    <title>Cours HTML de zéro</title>
+    <!-- Icone de l'onglet -->
+    <link rel="shortcut icon" href="./logo-html-head.png" />
+  </head>
+  <body>
+    <nav>
+      <!-- UL = Unorded List -->
+      <ul>
+        <li>Accueil</li>
+        <li>Boutique</li>
+        <li>
+            <a href="#form">Formulaire</a>
+        </li>
+      </ul>
+    </nav>
+
+    <header>
+      <!-- Un seul H1 par page -->
+      <h1>Ceci est le titre principale</h1>
+      <!-- Découverte du paragraphe p
+      Découverte de L'italique em
+      Découverte du gras strong -->
+      <p>
+        Texte classique, <em>texte en italique</em>,
+        <strong>Texte en gras</strong>,
+      </p>
+     <!-- Découverte du Lorem ipsum -->
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque quo,
+        <em><strong>quibusdam odit impedit itaque porro</strong></em
+        >, atque a quam asperiores est unde quos voluptates dicta id similique
+        neque, nihil et fugit.
+      </p>
+    </header>
+    <main>
+     <section>
+        <!-- Titre H2 -->
+<h2>Ordered List</h2>
+      <!-- Découverte de la liste ordonnée donc avec numéro à la ligne avec ol -->
+      <ol>
+        <li>Ceci est une</li>
+        <li>liste dans</li>
+        <li>l'ordre</li>
+      </ol>
+     </section>
+     <section>
+        <!-- Titre H3 -->
+        <h3>Image en HTML</h3>
+        <img src="./Image-cha-html.JPG" height="200" alt="image-section-html">
+        <!-- L'ALT de l'image est pour l'accessibilité -->
+        <div>
+            <!-- ceci est mon titre H4 -->
+            <h4>Tableaux</h4>
+            <!-- Tableau avec bordure de 4 -->
+            <table 
+                border="4" 
+                cellpadding="10" 
+                cellspacing="4" 
+                style="text-align: center">
+                <!-- Thead est pour l'entête du tableau -->
+                <thead>
+                    <!-- tr est une ligne -->
+                    <tr>
+                       <!-- Th est une colonne d'entête -->
+                        <th>Col 1</th>
+                        <th>Col 2</th>
+                        <th>Col 3</th>
+                        <!-- Maj + Alt + flèche du bas duplique la ligne selectionné> -->
+                    </tr>
+                </thead>
+                    <!-- Tbody est le corps du tableau -->
+                <tbody> 
+                    <tr>
+                        <!-- Autre exercice : 1 case prend 2 cases en vertical avec rowspan-->
+                        <td rowspan="2">Cell 1</td>
+                        <td>Cell 2</td>
+                        <td>Cell 3</td>
+                    </tr>                
+                    <tr>
+                        <!-- Idem : 1 case prend 2 cases en horizontal avec colspan-->
+                        <td colspan="2">Cell 4</td>
+                    </tr>                
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <!-- Ceci est un titre H5 avec une icone callée entre span -->
+            <h5><span>&#8594;</span> Les liens</h5>
+            <!-- a href est un lien pour Ancre = anchor, c-à-d emmène ailleurs -->
+            <!-- _blank permet de créer un nouvel onglet et donc de ne pas écraser la page actuelle -->
+            <a href="https://htmlcheatsheet.com" target="_blank">HTML Cheat Sheet</a>
+        </div>
+        <div>
+            <!-- Ceci est un titre H6 avec une icone avec i mais possible aussi avec span -->
+            <h6><i>&#128190;</i> Vidéo</h6>
+            <!-- Pour jouer la vidéo en arrivant sur le site et sans bruit et en boucle : autoplay muted et loop-->
+            <video src="./Vidéo pour html.mp4" height="200" autoplay muted></video>
+        </div>
+     </section> 
+     <section id="form">
+        <H2>Les formulaires</H2>
+        <!-- Action c'est où vont les données (on verra ça plus tard) on laisse comme ça -->
+        <form action="">
+           <!-- "for" et "id" permettent de lier le label à l'input  -->
+           <label for="name">Nom</label>
+            <input type="text" id="name"
+            placeholder="Entrer votre nom" /> 
+
+            <br>
+
+           <label for="age"> Entrer votre age</label> <input type="number" id="age" value="18">  
+
+           <br>
+
+            <!-- input de type select -->
+          <label for="gender">Genre</label>
+          <select id="gender">
+            <option value="Homme">Homme</option>
+            <option value="Femme">Femme</option>
+            <option value="Autre">Autre</option>
+          </select>
+
+          <!-- input de type radio -->
+          <div>
+            <input type="radio" name="type" id="human" checked />
+            <label for="human">Humain</label>
+
+            <input type="radio" name="type" id="dog"/>
+            <label for="dog">Chien</label>
+
+            <input type="radio" name="type" id="cat"/>
+            <label for="cat">Chat</label>
+          </div>
+          <textarea 
+            placeholder="Votre message..." id="" cols="20" rows="5">
+          </textarea>
+
+          <br>
+            <!-- Input de type checkbox -->
+            <input type="checkbox" name="" id="cgv">
+            <label for="cgv">Accepter les condition générales</label>
+
+            <br>
+
+            <!-- input de type submit permet de valider -->
+
+            <input type="submit" 
+            value="Ceci est un bouton pour valider le formulaire"/>
+        </form>
+            <button>Ceci est un bouton</button>
+
+    </section>
+</main>
+    <footer>
+        <!-- Mail et envoi de fichier -->
+        <a href="mailto:contact@art-graphic-leverdier.com">Contactez-moi !</a>
+        <a href="./notice.txt" download="Notice">Télécharger la notice</a>
+    </footer>
+  </body>
+</html>
